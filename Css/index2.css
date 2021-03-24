@@ -1,0 +1,244 @@
+html, body {
+    margin: 0;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 25px;
+	font-variant: small-caps;
+}
+
+body {
+	box-sizing: border-box;
+	background-image: linear-gradient(135deg, #9708CC 10%, #0990F1 100%);
+	height: 100vh;
+	text-align: center;
+	color: white;
+}
+
+/* Grid */
+
+.conteiner {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 15vh 25vh 65vh 15vh;
+	grid-template-areas: "header header""article article""main aside""footer footer";
+}
+
+header {	
+	grid-area: header;
+}
+
+article{
+	background: rgb(100, 152, 237);
+	grid-area: article;
+}
+
+main {
+	background: rgb(100, 152, 237);
+	grid-area: main;
+}
+
+aside {
+	background: rgb(100, 152, 237);
+	grid-area: aside;
+}
+
+footer {	
+	grid-area: footer;
+}
+
+/* fim do Grid */
+
+/* ------------  cabeçalho ----------- */
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#header_img {
+    width: 50px;
+    margin: 25px 0 0 20px;
+}
+
+#header_menu {
+    display: flex;
+    font-variant: small-caps;
+	list-style:none;
+	
+}
+
+#header_menu li {
+    margin-top: 20px;
+	text-decoration: none;
+
+}
+
+#header_menu li a {
+    color:white;
+    padding: 15px 15px;
+	text-decoration: none;
+}
+
+#header_menu a:hover {
+    color: black;
+}
+
+#header_pesquisa {
+    background-color: #e7e7e7;
+    border: solid 2px #ffffff;
+    border-radius: 10px;
+    width: 300px;
+    height: 28px;
+    margin: 25px 20px 0 0;
+    position: relative;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 1px;
+    font-size: 13px;
+    border: none;
+    height: 20px;
+    width: 180px;
+    outline: none;
+}
+
+
+#btnBusca {
+    border: none;
+    float: right;
+	font-size: 20px;
+	color: black;
+    height: 28px;
+    border-radius: 0 7px 7px 0;
+    width: 70px;
+    font-weight: bold;
+    background:rgb(100, 152, 237);
+    outline: none;
+	text-decoration: none;
+}
+
+
+/* ------------ fim cabeçalho ----------- */
+
+/* ------------ conversor ----------- */
+
+
+form {
+	display: flex;
+	width: 400px;
+	flex-wrap: wrap;
+	margin: auto;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 50px;
+	margin-top: 5%;
+}
+
+button {
+	width: 300px;
+	height: 40px;
+}
+
+p {
+	height: 22px;	
+}
+input {
+	height: 35px;
+}
+select {
+	display: block;
+	font-weight: 700;
+	color: #002272;
+	-webkit-appearance: none;
+  	appearance: none;
+	padding: 10px;
+	
+}
+input, select {
+	width: 160px;
+	font-size: 17px;
+    margin: 1px 5px 15px;
+	border-radius: 50px;
+	color: #002272;
+	background-color:white;
+	padding: 5px 15px;
+}
+
+input:focus, select:focus {
+	outline: none;
+	color: #002272;
+	
+}
+select:focus {
+	width: 166px;
+	outline: none;
+	color: #002272;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#cambio2 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/* ------------ fim conversor ----------- */
+
+/* ------------ figura  aside ----------- */
+
+#figura2{
+	margin-top: 5%;
+}
+
+/* ------------ footer ----------- */
+
+/*inicio footer*/
+
+#footer {
+	clear: both; 
+	margin: 0 auto;
+	position: relative;
+	bottom: 0;
+	display: flex; 
+  }
+  #linkedin img {
+	width: 50px;
+	height: 50px;
+	display: flex;   
+	margin: 20px;
+  }
+  #linkedin img:hover {
+	width: 70px;
+	height: 70px;
+	background-image: linear-gradient(135deg, #9708cc 10%, #0990f1 100%);
+  }
+  
+  span{
+	clear: both;
+	position: absolute;  
+	bottom: 0;
+	margin: 25px 25px 25px 40px;
+	font-size: 14px;
+	font-variant: small-caps;
+	
+  }
+  span#ano {
+	clear: both;
+	position: absolute;  
+	bottom: 0;
+	margin: 2px;
+	margin-left: 45%;
+  
+  }
+  /*fim footer*/
+  

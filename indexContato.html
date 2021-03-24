@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/contato.css">
+    <link rel="sortcut icon" href="Img/calcula+.png" type="image/png" />
+    <title>Página de Contato</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <header>
+
+            <figure id="header_img">
+                <a href=""><img src="Img/calcula+.png" alt="logo" width="100%"></a>
+            </figure>
+            <section id="header_sec">
+                <ul id="header_menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Calculadora</a></li>
+                    <li><a href="index2.html">Conversor</a></li>
+                    <li><a href="indexContato.html">Contato</a></li>
+                </ul>
+            </section>
+            <section id="header_pesquisa">
+                <input type="text" id="txtBusca" placeholder="Google..." />
+                <a id="btnBusca" href="https://www.google.com">Enviar</a>
+            </section>
+            </section>
+
+        </header>
+        <article>
+            <h1>Formulario de Contato</h1>
+        </article>
+        <main>
+            <form name="formCadastro" method="post" id="formulario">
+                <table>
+                    <!--Nome Completo-->
+                    <tr>
+                        <td> <label>Nome Completo</label> </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="text" name="nome" id="nome" onblur="validacao()" placeholder="Nome Completo"
+                                class="stylo" style="text-transform: uppercase" /></td>
+                    </tr>
+
+                    <!--Email-->
+                    <tr>
+                        <td><label>E-mail</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="email" id="email" placeholder="E-mail" onblur="validacaoEmail()"
+                                id="dados" /></td>
+                    </tr>
+                    <tr>
+                        <td> <label id="labelCpf">CPF</label>
+                            <label id="labelSex">Sexo</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <input type="text" name="cpf" id="cpf" placeholder="CPF" onblur="VerificaCPF()"
+                                class="stylo" />
+
+
+                            <!--Sexo-->
+                            <select name="sexo" id="sexo" id="dados">
+                                <option value="Masculino" selected> Masculino </option>
+                                <option value="Feminino"> Feminino </option>
+                                <option value="Não Informado"> Não Informado </option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!--Dia de Nascimento-->
+                    <tr>
+                        <td> <label>Data de Nascimento</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="dia" id="dia" placeholder="Dia" maxlength="2" minlength="1"
+                                onblur="verificaString()" />
+
+                            <select name="mes" id="mes" id="dados">
+                                <option value="1" selected> Janeiro </option>
+                                <option value="2"> Fevereiro </option>
+                                <option value="3"> Março </option>
+                                <option value="4"> Abril </option>
+                                <option value="5"> Maio </option>
+                                <option value="6"> Junho </option>
+                                <option value="7"> Julho </option>
+                                <option value="8"> Agosto </option>
+                                <option value="9"> Setembro </option>
+                                <option value="10"> Outubro </option>
+                                <option value="11"> Novembro </option>
+                                <option value="12"> Dezembro </option>
+                            </select>
+
+                            <input type="text" name="ano" id="ano" placeholder="Ano " id="dados" maxlength="4"
+                                minlength="4" onchange="verificaIdade()" />
+                        </td>
+                    </tr>
+
+
+
+                    <!--Botão Concluído-->
+                    <tr>
+                        <td> <input type="button" id="button" value="Concluído" onclick="capturando()"> </td>
+                    </tr>
+                </table>
+            </form>
+
+        </main>
+
+        <aside>
+            <div id="divTexto">
+                <p id="frase"></p>
+            </div>
+        </aside>
+
+        <!--JavaScrip-->
+        <script src="Js/contato.js"></script>
+
+        <footer id="footer">
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/joseguilhermepimenteldarocha" target="_blank"><img
+                        src="Img/linkedin-brands.svg" /></a>
+            </div>
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/joseane-ivelise-grigolo-863a1a35" target="_blank"><img
+                        src="Img/linkedin-brands.svg" /></a>
+            </div>
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/welton-vitor-da-s-jesus-21104b206" target="_blank"><img
+                        src="Img/linkedin-brands.svg" /></a>
+            </div>
+            <span>Guilherme - Joseane - Vitor</span>
+            <span id="ano">2021</span>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/index2.css">
+    <link rel="sortcut icon" href="Img/calcula+.png" type="image/png" />
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <header>
+
+            <figure id="header_img">
+                <a href=""><img src="Img/calcula+.png" alt="logo" width="100%"></a>
+            </figure>
+            <section id="header_sec">
+                <ul id="header_menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Calculadora</a></li>
+                    <li><a href="index2.html">Conversor</a></li>
+                    <li><a href="indexContato.html">Contato</a></li>
+                </ul>
+            </section>
+            <section id="header_pesquisa">
+                <input type="text" id="txtBusca" placeholder="Google..." />
+                <a id="btnBusca" href="https://www.google.com">Enviar</a>
+            </section>
+
+        </header>
+        <article></article>
+        <main>
+            <h1>Conversor de Moedas</h1>
+            <form onsubmit="return false" id="form1">
+                <input type="number" id="conversor_original" placeholder="1"></input>
+
+                <select type="text" id="convesor_Unitario" placeholder="Escolha a moeda" required>
+                    <option selected>Dolar Americano</option>
+                    <option>Dolar Canadense</option>
+                    <option>Real Brasileiro</option>
+                    <option>Euro</option>
+                    <option>Libra</option>
+                    <option>Peso Argentino</option>
+                </select>
+
+
+
+                <select type="text" id="convesor_Unitario2" placeholder="Escolha a moeda" required>
+                    <option selected>Dolar Americano</option>
+                    <option>Dolar Canadense</option>
+                    <option>Real Brasileiro</option>
+                    <option>Euro</option>
+                    <option>Libra</option>
+                    <option>Peso Argentino</option>
+                </select>
+
+                <input type="number" id="conversor_original_2" placeholder="1"></input>
+
+            </form>
+
+            <p>Valor Unitário </p>
+            <p id="cambio2">1 USD = 1 USD</p>
+            <p>* Taxa de câmbio dia 16/03/2021</p>
+
+            <script src="Js/index2.js"></script>
+
+        </main>
+        <aside>
+            <div id="figura2">
+                <img width="50%" height="30%" src="img/img-globo-ds.png">
+            </div>
+        </aside>
+
+        <footer id="footer">
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/joseguilhermepimenteldarocha" target="_blank"><img
+                        src="Img/linkedin-brands.svg" /></a>
+            </div>
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/joseane-ivelise-grigolo-863a1a35" target="_blank"><img
+                        src="Img/linkedin-brands.svg" /></a>
+            </div>
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/welton-vitor-da-s-jesus-21104b206" target="_blank"><img
+                        src="Img/linkedin-brands.svg" /></a>
+            </div>
+            <span>Guilherme - Joseane - Vitor</span>
+            <span id="ano">2021</span>
+        </footer>
+
+
+    </div>
+
+</body>
+
+</html>

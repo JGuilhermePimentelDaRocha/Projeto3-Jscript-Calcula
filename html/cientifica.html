@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--GUILHERME - JOSEANE - VITOR-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Cientifica</title>
+    <link rel="stylesheet" href="../css/cientifica.css">
+    <script src="../js/cientifica.js"></script>
+</head>
+
+<body>
+    <!--BOAS PRATICAS USAR THIS. -->
+    <form name="calculadora">
+        <!--ESPAÇOS NO DISPLAY-->
+        <table class="calculadoras" cellspacing="0px" cellpadding="0px">
+            <tr>
+                <!--5 COLUNAS NO DISPLAY-->
+                <!--INICIANDO COM VALOR 0 NO DISPLAY-->
+                <td colspan="5"><input id="visor" name="display" value="0" size="28" maxlength="25"></td>
+            </tr>
+            <tr>
+                <!--ZERAR DISPLAY-->
+                <td><input type="button" class="limpa" name="limpa" value="C" onclick="this.form.display.value= 0 ">
+                </td>
+                <!--DELETAR UM POR VEZ DISPLAY-->
+                <td><input type="button" class="limpa" name="limpa" value="<--"
+                        onclick="deletarUmporVez(this.form.display)"></td>
+                <!--VERIFICANDO E APRESENTANDO RESULTADO NO DISPLAY-->
+                <td><input type="button" class="limpa" name="limpa" value="="
+                        onclick="if(verificaDigito(this.form.display.value)) { resultado(this.form) }"></td>
+                <!--APRESENTANDO E PEGANDO NUMERO PI NO DISPLAY-->
+                <td><input type="button" class="operacao" name="operacao" value="π"
+                        onclick="pegandoValor(this.form.display,'3.14159265359')"></td>
+                <!--VERIFICANDO E TRANSFORMANDO PARA PORCENTAGEM-->
+                <td><input type="button" class="sinal" name="sinal" value="%" onclick="if(verificaDigito(this.form.display.value)) { percentual(this.form) }">
+                </td>
+            </tr>
+            <tr>
+                <!--APRESENTANDO E PEGANDO VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="7"
+                        onclick="pegandoValor(this.form.display, '7')"></td>
+                <!--APRESENTANDO E PEGANDO VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="8"
+                        onclick="pegandoValor(this.form.display, '8')"></td>
+                <!--APRESENTANDO E PEGANDO  VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="9"
+                        onclick="pegandoValor(this.form.display, '9')"></td>
+                <!--EQUIPE-->
+                <td><input type="button" class="operacao" name="operacao" value="GJV"
+                        onclick="pegandoValor(this.form.display, 'Gui--Josie--Vitor')"></td>
+                <!--APRESENTANDO E PEGANDO VALOR DIVISÃO NO DISPLAY-->
+                <td><input type="button" class="sinal" name="sinal" value="/"
+                        onclick="pegandoValor(this.form.display, '/')"></td>
+            <tr>
+                <!--APRESENTANDO E PEGANDO VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="4"
+                        onclick="pegandoValor(this.form.display, '4')"></td>
+                <!--APRESENTANDO E PEGANDO VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="5"
+                        onclick="pegandoValor(this.form.display, '5')"></td>
+                <!--APRESENTANDO E PEGANDO VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="6"
+                        onclick="pegandoValor(this.form.display, '6')"></td>
+                <!--VERIFICANDO E TRANSFORMANDO VALOR ELEVADO AO CUBO-->
+                <td><input type="button" class="operacao" name="operacao" value="x3"
+                        onclick="if(verificaDigito(this.form.display.value)) { cubo(this.form) }"></td>
+                <!--APRESENTANDO  E PEGANDO VALOR VEZES NO DISPLAY-->
+                <td><input type="button" class="sinal" name="sinal" value="*"
+                        onclick="pegandoValor(this.form.display, '*')"></td>
+            </tr>
+            <tr>
+                <!--APRESENTANDO  E PEGANDO VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="1"
+                        onclick="pegandoValor(this.form.display, '1')"></td>
+                <!--APRESENTANDO  E PEGANDO VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="2"
+                        onclick="pegandoValor(this.form.display, '2')"></td>
+                <!--APRESENTANDO E PEGANDO VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="3"
+                        onclick="pegandoValor(this.form.display, '3')"></td>
+                <!--VERIFICANDO E TRANSFORMANDO VALOR EM RAIZ QUADRADA-->
+                <td><input type="button" class="operacao" name="operacao" value="√"
+                        onclick="if(verificaDigito(this.form.display.value)) { raiz(this.form) }"></td>
+                <!--APRESENTANDO  E PEGANDO VALOR MENOS DISPLAY-->
+                <td><input type="button" class="sinal" name="sinal" value="-"
+                        onclick="pegandoValor(this.form.display, '-')"></td>
+            </tr>
+            <tr>
+                <!--APRESENTANDO  E PEGANDO VALOR NEGATIVO NO DISPLAY-->
+                <td><input type="button" class="sinal" name="sinal" value="&#177"
+                        onclick="trocaSinal(this.form.display)"></td>
+                <!--APRESENTANDO E PEGANDO VALOR NO DISPLAY-->
+                <td><input type="button" class="numero" name="numero" value="0"
+                        onclick="pegandoValor(this.form.display, '0')"></td>
+                <!--APRESENTANDO E PEGANDO VALOR PONTO NO DISPLAY-->
+                <td><input type="button" class="sinal" name="sinal" value="."
+                        onclick="pegandoValor(this.form.display, '.')"></td>
+                <!--VERIFICANDO E TRANSFORMANDO VALOR ELEVADO AO QUADRADO-->
+                <td><input type="button" class="operacao" name="operacao" value="x2"
+                        onclick="if(verificaDigito(this.form.display.value)) { potencia2(this.form) }"></td>
+                <!--APRESENTANDO E PEGANDO VALOR MAIS NO DISPLAY-->
+                <td><input type="button" class="sinal" name="sinal" value="+"
+                        onclick="pegandoValor(this.form.display, '+')"></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>

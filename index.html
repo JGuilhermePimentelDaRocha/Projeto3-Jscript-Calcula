@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="sortcut icon" href="Img/calcula+.png" type="image/png" />
+    <link rel="stylesheet" href="./css/calculadora.css">
+    <title>Calculadora</title>
+    <script>
+        function desabilitar() {
+            document.getElementById("cientifica").src = "./html/indexBranco.html";
+        }
+        function habilitar() {
+            if (document.getElementById('calculadora').innerHTML == "Habilitar Científica") {
+                document.getElementById("simples").src = "img/calcula+2.png"; // trocar para ./html/indexBranco.html
+                document.getElementById("cientifica").src = "./html/cientifica.html";
+                document.getElementById('calculadora').innerHTML = "Habilitar Simples";
+            } else {
+                document.getElementById("cientifica").src = "img/calcula+2.png"; // ./html/indexBranco.html
+                document.getElementById("simples").src = "./html/simples.html";
+                document.getElementById('calculadora').innerHTML = "Habilitar Científica";
+            }
+        }
+    </script>
+</head>
+
+<body onload="desabilitar()">
+    <div class="conteiner">
+        <header>
+            <figure id="header_img">
+                <a href=""><img src="./img/calcula+.png" alt="logo" width="100%"></a>
+            </figure>
+            <section id="header_sec">
+                <ul id="header_menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Calculadora</a></li>
+                    <li><a href="index2.html">Conversor</a></li>
+                    <li><a href="indexContato.html">Contato</a></li>
+                </ul>
+            </section>
+            <section id="header_pesquisa">
+                <input type="text" id="txtBusca" placeholder="Google..." />
+                <a id="btnBusca" href="https://www.google.com">Enviar</a>
+            </section>
+            </section>
+        </header>
+        <article>
+            <button type="button" id="calculadora" onclick="habilitar()">Habilitar Científica</button>
+        </article>
+        <main>
+            <h1>Calculadora Simples</h1>
+            <div id="form">
+                <IFRAME src="html/simples.html" id="simples" width="550" height="450" scrolling="no" frameborder="0"
+                    align="center"></IFRAME>
+            </div>
+        </main>
+        <aside>
+            <h1>Calculadora Científica</h1>
+            <div id="form">
+                <IFRAME src="html/cientifica.html" id="cientifica" width="550" height="450" scrolling="no"
+                    frameborder="0" align="center"></IFRAME>
+            </div>
+        </aside>
+        <footer id="footer">
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/joseguilhermepimenteldarocha/" target="_blank"><img
+                        src="./img/linkedin-brands.svg" /></a>
+            </div>
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/joseane-ivelise-grigolo-863a1a35" target="_blank"><img
+                        src="./img/linkedin-brands.svg" /></a>
+            </div>
+            <div id="linkedin">
+                <a href="hhttps://www.linkedin.com/in/welton-vitor-da-s-jesus-21104b206" target="_blank"><img
+                        src="./img/linkedin-brands.svg" /></a>
+            </div>
+            <span>Guilherme - Joseane - Vitor</span>
+            <span id="ano">2021</span>
+        </footer>
+    </div>
+</body>
+
+</html>
